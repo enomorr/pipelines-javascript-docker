@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: enomorrpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enomorrpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: enomorrpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: enomorrpipelinesjavascriptdocker 
+          image: enomorreg.azurecr.io/enomorrpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
